@@ -17,9 +17,12 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-{% comment %} <video id="video" autoplay loop playsinline muted controls crossorigin="anonymous" webkit-playsinline style="display:none">
+<!-->
+<video id="video" autoplay loop playsinline muted controls crossorigin="anonymous" webkit-playsinline style="display:none">
 	<source src="video/sintel.mp4">
-</video> {% endcomment %}
+</video>
+-->
+
 <video width="400" controls>
   <source src="video/sintel.mp4">
 </video>
@@ -136,13 +139,14 @@ function playVideo()
 {
 	let video = document.getElementById('video');
 	video.play();
-	var toggleSound = document.body.addEventListener('touchstart', function(){
-        if(video.paused === true){
-          video.play()
-        } else if(video.paused === false){
-          video.pause()
-        }
-    });
+
+	//var toggleSound = document.body.addEventListener('touchstart', function(){
+        //if(video.paused === true){
+          //video.play()
+        //} else if(video.paused === false){
+          //video.pause()
+        //}
+    //});
 }
 function update()
 {
