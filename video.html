@@ -17,8 +17,11 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video" autoplay loop playsinline muted crossorigin="anonymous" webkit-playsinline style="display:none">
+{% comment %} <video id="video" autoplay loop playsinline muted controls crossorigin="anonymous" webkit-playsinline style="display:none">
 	<source src="video/sintel.mp4">
+</video> {% endcomment %}
+<video width="400" controls>
+  <source src="video/sintel.mp4">
 </video>
 		
 <!-- 
@@ -29,11 +32,8 @@
 <script>
 
 var scene, camera, renderer, clock, deltaTime, totalTime;
-
 var arToolkitSource, arToolkitContext;
-
 var markerRoot1;
-
 var mesh1;
 
 initialize();
